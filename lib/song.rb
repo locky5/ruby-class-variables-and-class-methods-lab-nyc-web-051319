@@ -31,16 +31,24 @@ class Song
   def self.genre_count
     hash = {}
     @@genres.each do |genre|
-      if hash[genre]
-        hash[genre] += 1 
+      if hash[genre] # if the genre already exists in hash and is not nil (false)...
+        hash[genre] += 1 #increment by one
       else
-        hash[genre] = 1 
+        hash[genre] = 1 # if genre is not there, just set value to 1
       end
     end
     hash
   end
   
   def self.artist_count
+    hash = {}
+    @@artists.each do |artist|
+      if hash[artist]
+        hash[artist] += 1 
+      else
+        hash[artist] = 1 
+      end
+    end
   end
 
 end

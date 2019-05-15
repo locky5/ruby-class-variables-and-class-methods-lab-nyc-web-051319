@@ -29,6 +29,7 @@ class Song
   end
   
   def self.genre_count
+    hash = {}
     all_genres = @@genres 
   end
   
